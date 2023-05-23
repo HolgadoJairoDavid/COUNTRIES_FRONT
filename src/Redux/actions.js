@@ -26,8 +26,11 @@ import {
 } from "./types";
 import axios from "axios";
 
-const endpointCountries = "http://localhost:3001/countries";
-const endpointActivities = "http://localhost:3001/activities";
+// const endpointCountries = "http://localhost:3001/countries";
+// const endpointActivities = "http://localhost:3001/activities";
+
+const endpointCountries = "https://countriesback-production-11ed.up.railway.app/countries";
+const endpointActivities = "https://countriesback-production-11ed.up.railway.app/activities";
 
 export const getAllCountries = () => {
   return (dispatch) => {

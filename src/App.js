@@ -43,7 +43,8 @@ function App() {
 
   const login = async (state) => {
     const { email, password } = state;
-    const URL = `http://localhost:3001/login?email=${email}&password=${password}`;
+    // const URL = `http://localhost:3001/login?email=${email}&password=${password}`;
+    const URL = `https://countriesback-production-11ed.up.railway.app/login?email=${email}&password=${password}`;
     try {
       const response = await axios.get(URL);
       const { access } = response.data;

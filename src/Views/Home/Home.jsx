@@ -49,6 +49,7 @@ const Home = (props) => {
     );
     setCurrentPage(nextPage);
   };
+  
   const prevHandler = () => {
     if (currentPage === 0) return;
     dispatch(setTester());

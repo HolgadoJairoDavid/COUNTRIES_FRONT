@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import {
   cleanAllACtivities,
   deleteActivity,
+  getActivityById,
   getAllActivities,
   getCountryById,
 } from "../../Redux/actions";
@@ -24,10 +25,13 @@ const Activity = (props) => {
       dispatch(getCountryById(props.countryId));
     }
   };
+  const handleUpdate = () => {
+    dispatch(getActivityById(props.id))
+  }
 
   useEffect(() => {
     dispatch(getAllActivities());
-  });
+  }, [dispatch]);
 
   return (
     <div className={style.Activity}>
@@ -37,7 +41,7 @@ const Activity = (props) => {
           )}
         </div>
       <div className={style.Buttons}>
-        <button>
+        <button onClick={handleUpdate}>
           <NavLink to={`/activities/${props.id}`} className={style.NavLink}>
             Update
           </NavLink>

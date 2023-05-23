@@ -24,7 +24,7 @@ const Register = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { email, password } = state;
-    const URL = "http://localhost:3001/register";
+    const URL = "https://countriesback-production-11ed.up.railway.app/register";
     const { data } = await axios.post(URL, { email, password });
 
     if (data.result === "Successful registration") {

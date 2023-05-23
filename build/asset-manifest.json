@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.37b8ce65.css",
+    "main.js": "/static/js/main.e2860957.js",
+    "static/media/BACK1.png": "/static/media/BACK1.dab258ee590a07b3f4e0.png",
+    "static/media/BACKGROUND.png": "/static/media/BACKGROUND.7ee50e101be1d4b5e4bf.png",
+    "static/media/About.jpg": "/static/media/About.515dd639b3dfb38e1a03.jpg",
+    "static/media/SLIDE1.png": "/static/media/SLIDE1.c67c17b1d204b6e8f2e2.png",
+    "static/media/IMG1.png": "/static/media/IMG1.83bb9c672ad41719e194.png",
+    "static/media/postGree.png": "/static/media/postGree.643d40d11f764b9df1fe.png",
+    "static/media/express.png": "/static/media/express.915b89629a5fefdb6ca0.png",
+    "static/media/BACK6.jpg": "/static/media/BACK6.201fd59c9473283ee303.jpg",
+    "static/media/BACK5.jpg": "/static/media/BACK5.abdb98e1f344f16fb513.jpg",
+    "static/media/BACK3.jpg": "/static/media/BACK3.ccdc1ddf48037dde744e.jpg",
+    "static/media/git.png": "/static/media/git.faccfae3c97596fcb27e.png",
+    "static/media/html.png": "/static/media/html.f3aa7827cd5160f3fc1c.png",
+    "static/media/BACK2.jpg": "/static/media/BACK2.b225a18ae71648967976.jpg",
+    "static/media/BACK4.jpg": "/static/media/BACK4.76cbd4e1ec7596203b9b.jpg",
+    "static/media/JavaScript.png": "/static/media/JavaScript.747787dca203fae2cd83.png",
+    "static/media/react.png": "/static/media/react.20adfb35ae6a6e5817bf.png",
+    "static/media/SQL.png": "/static/media/SQL.ee2b2d8279fb9225c0c3.png",
+    "static/media/node.png": "/static/media/node.c580880cda32187e07e1.png",
+    "static/media/Linkedin.png": "/static/media/Linkedin.29011e551a4709d1fc68.png",
+    "static/media/css.png": "/static/media/css.4624a929dd96f7c782c5.png",
+    "static/media/sequelize.png": "/static/media/sequelize.d98b2554b49e415e0c08.png",
+    "index.html": "/index.html",
+    "main.37b8ce65.css.map": "/static/css/main.37b8ce65.css.map",
+    "main.e2860957.js.map": "/static/js/main.e2860957.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37b8ce65.css",
+    "static/js/main.e2860957.js"
+  ]
+}

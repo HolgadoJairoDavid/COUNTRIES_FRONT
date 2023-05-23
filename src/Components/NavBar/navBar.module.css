@@ -1,0 +1,56 @@
+.NavBar {
+    position: fixed;
+    z-index: 1000;
+    background-image: linear-gradient(to right, #1537be7f, #342cc99d, #3c23c88e, #4317c788, #4900c68a, #3c00bc85, #2d00b385, #1c00a9a3, #00009f90);
+    background-color: #ff3c00a6;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    box-shadow: 0px 1px 5px #000;
+}
+
+.NavBar button {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 40px;
+    position: relative;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.NavBar button:hover{
+    transform: scale(1.1);
+}
+
+.NavLink {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.Logo {
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.Henry {
+    color: yellow;
+    text-shadow: -1px 1px 3px #000;
+    font-weight: 100;
+}
+
+.Subtitle {
+    color: white;
+    text-shadow: -1px 1px 3px #000;
+    font-weight: 400;
+}

@@ -1,0 +1,23 @@
+.CountryCreateActivity {
+  background-color: rgba(255, 255, 255, 0.404);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.CountryCreateActivity img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.CountryCreateActivity p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    display: flex;
+    color: rgb(1, 1, 1);
+    font-style: italic;
+}

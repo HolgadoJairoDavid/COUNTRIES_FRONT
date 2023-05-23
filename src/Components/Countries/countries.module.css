@@ -1,0 +1,22 @@
+.Container {
+  display: grid;
+  grid-template-columns: repeat(5, 18%);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  padding-left: 10px;
+  margin-top: 10%;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 50vh;
+  padding-top: 10px;
+}
+
+.Title {
+  color: aliceblue;
+  top: 50px;
+  position: relative;
+  font-weight: lighter;
+  font-size: 2.5em;
+  text-shadow: -1px 1px 7px #000;
+  left: 10px;
+}

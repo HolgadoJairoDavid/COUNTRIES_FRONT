@@ -1,0 +1,43 @@
+.Activities {
+  background-color: rgba(0, 0, 0, 0.746);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  color: aliceblue;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  padding-left: 10px;
+  margin-top: 8%;
+  margin-right: 10px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 78vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.Container::-webkit-scrollbar-thumb {
+  background-color: #f04021;
+  border-radius: 5px;
+}
+
+.Title {
+    color: aliceblue;
+    top: 50px;
+    left: 10px;
+    position: absolute;
+    font-weight: lighter;
+    font-size: 2.5em;
+    text-shadow: -1px 1px 7px #000;
+  }

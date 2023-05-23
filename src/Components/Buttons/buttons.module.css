@@ -1,0 +1,41 @@
+.Buttons {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.448);
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    padding: 5px 0px 5px 0px;
+}
+
+.NumberPage {
+    padding: 5px 10% 5px 10%;
+}
+
+.Buttons button {
+    background-color:#ff0051;
+	border-radius:14px;
+	border:1px solid #ff0051;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:0px 20px 0px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #730237;
+    transition: .5s;
+}
+
+.Buttons button:hover {
+	background-color:#ff2167df;
+    border:1px solid #ff2167df;
+    box-shadow: -1px 1px 7px #ff5e91df;
+}
+.Buttons button:active {
+	position:relative;
+	top:1px;
+}

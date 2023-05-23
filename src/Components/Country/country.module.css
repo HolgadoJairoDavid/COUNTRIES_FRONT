@@ -1,0 +1,42 @@
+.Country {
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    background-color: #03030368;
+    border-radius: 7px;
+    padding: 5px;
+    height: 20vh;
+    position: relative;
+    transition: all 300ms;
+}
+
+.Country:hover{
+    transform: scale(1.1);
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Container img {
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+.CountryName {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-style: italic;
+    text-align: left;
+}
+
+.NavLink {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    font-style: normal;
+}

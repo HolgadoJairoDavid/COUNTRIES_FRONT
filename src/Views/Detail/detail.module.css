@@ -1,0 +1,71 @@
+.Detail {
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.Container {
+  width: 70vw;
+  margin: auto;
+  margin-top: 90px;
+  padding: 10px;
+  border-radius: 10px;
+  color: aliceblue;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-column-gap: 1%;
+}
+
+.CountryDetails {
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  background-color: rgba(0, 0, 0, 0.577);
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+}
+
+.Details {
+  font-weight: 100;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CountryDetails h1 {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.CountryDetails img {
+  padding: 5px 5px 5px 0px;
+  border-radius: 10px;
+}
+
+.Activities {
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  background-color: rgba(0, 0, 0, 0.577);
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.Activities::-webkit-scrollbar {
+  width: 7px;
+}
+
+.Activities::-webkit-scrollbar-thumb {
+  background-color: #f04021;
+  border-radius: 5px;
+}
+
+.Title {
+  font-weight: 400;
+  font-style: italic;
+}

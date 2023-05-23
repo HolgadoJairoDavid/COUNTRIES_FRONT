@@ -1,0 +1,90 @@
+.Error {
+  background-color: rgba(0, 0, 0, 0.518);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.Error h1 {
+  color: aliceblue;
+  margin: 5vh 5vh 20vh 5vh;
+  text-shadow: 0px 0px 3px #000, -1px 1px 5px #000;
+  font-size: 5em;
+  animation: title 2s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes title {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+100%{
+    transform: scale(1);
+}
+}
+
+.Error p {
+  font-weight: 200;
+  font-size: 2em;
+  text-shadow: 0px 0px 3px #000, -1px 1px 5px #000;
+
+}
+
+.Error img {
+    width: 7rem;
+    position: absolute;
+    background-color: #00000019;
+    border-radius: 100%;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.Error button {
+  margin-top: 3em;
+  min-width: 100px;
+  text-decoration: none;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 10px;
+  z-index: 0;
+  background: none;
+  overflow: hidden;
+  border: 2px solid #fefefe;
+  color: #ffd819;
+  bottom: 1vh;
+  box-shadow: -3px 5px 7px #000;
+  font-size: 1em;
+}
+.Error button:hover {
+  color: #fff;
+  border: 2px solid #ffd819;
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.Error button:hover:after {
+  width: 100%;
+}
+.Error button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #ffd819;
+}

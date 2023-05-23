@@ -1,0 +1,100 @@
+.Container {
+  background: #00000083;
+  color: hsl(0, 0%, 100%);
+  width: fit-content;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 2em;
+  text-align: justify;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  top: 10vh;
+  box-shadow: 0px 0px 10px #000;
+  text-shadow: 0px 0px 5px #000;
+}
+.AboutMe {
+  display: flex;
+}
+
+.Img {
+  display: inline;
+  height: 600px;
+}
+
+.Container img {
+  height: 600px;
+  max-height: 100%;
+  border-radius: 100%;
+  margin-right: 20px;
+  box-shadow: -7px 10px 10px #000;
+}
+
+.Container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+.AboutMe span {
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-style: italic;
+}
+
+.Techs {
+  display: block;
+}
+
+.Techs h1 {
+  text-align: center;
+}
+
+.TechsImg {
+  margin-left: 12.5%;
+  display: grid;
+  grid-template-columns: repeat(5, 18.8%);
+  grid-row-gap: 1em;
+}
+
+.TechsImg img,
+.Contact img {
+  height: 50px;
+  padding: 0;
+  border-radius: 0%;
+  box-shadow: none;
+  position: relative;
+}
+
+.Back {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: -1px 1px 10px #000;
+  background: #ece9e9;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.Back:hover {
+  transform: scale(1.1);
+}
+
+.Contact img {
+  text-align: center;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.Contact h1 {
+  text-align: center;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

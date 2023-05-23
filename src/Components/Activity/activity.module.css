@@ -1,0 +1,147 @@
+.Activity {
+  background-color: rgba(240, 248, 255, 0.204);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 7px;
+  position: relative;
+  transition: 300ms;
+  height: 230px;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.Activity:hover {
+  transform: scale(1.009);
+}
+
+.Buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.Buttons button {
+  background-color: #ff0051;
+  border-radius: 14px;
+  border: 1px solid #ff0051;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 0px 10px 0px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #730237;
+  transition: 0.5s;
+  position: absolute;
+  top: 5px;
+}
+
+.Buttons button:hover {
+  background-color: #ff2167df;
+  border: 1px solid #ff2167df;
+  box-shadow: -1px 1px 7px #ff5e91df;
+}
+.Buttons button:active {
+  position: relative;
+  top: 1px;
+}
+
+.ButtonReset {
+  background-color: transparent;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.ButtonReset:hover {
+  opacity: 1;
+}
+
+.ButtonReset button{
+  margin-top: 3px;
+  background-color: #ff0051;
+  border-radius: 50%;
+  border: 1px solid #ff0051;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #730237;
+  transition: 0.5s;
+  height: 30px;
+  width: 30px;
+}
+
+.ButtonReset button:hover {
+  background-color: #ff2167df;
+  border: 1px solid #ff2167df;
+  box-shadow: -1px 1px 7px #ff5e91df;
+}
+.ButtonReset button:active {
+  position: relative;
+  top: 1px;
+}
+
+.InfoAndImage {
+  margin-top: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Info {
+    padding-right: 10px;
+}
+
+.Info h1 {
+    font-size: 1.7em;
+    text-shadow: -1px 1px 3px #000;
+}
+.Image {
+    align-self: center;
+    padding-top: 5px;
+}
+
+.Image img {
+  max-width: 100%;
+  border-radius: 7px;
+}
+
+.Details {
+  font-weight: 100;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ContentSeasons {
+    padding: 5px;
+    background-color: #ff000045;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.Seasons {
+    display: flex;
+    font-style: italic;
+    justify-content: space-between;
+}
+
+.SeasonsTitle {
+    display: block;
+    text-align: center;
+}

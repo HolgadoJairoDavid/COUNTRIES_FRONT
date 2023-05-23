@@ -105,7 +105,7 @@ const navigate = useNavigate()
 
   React.useEffect(() => {
     dispatch(getActivityById(id));
-  });
+  }, [dispatch, id]);
   return (
     <div className={style.PutActivity}>
       <form>

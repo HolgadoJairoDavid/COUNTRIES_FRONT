@@ -1,10 +1,8 @@
 import { useDispatch } from "react-redux";
 import {
-  cleanAllACtivities,
   deleteActivity,
   getActivityById,
   getAllActivities,
-  getCountryById,
 } from "../../Redux/actions";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -12,12 +10,9 @@ import style from "./activity.module.css";
 
 const Activity = (props) => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate()
   const { pathname } = useLocation();
   const handleDelete = () => {
-    // dispatch(cleanAllACtivities(props.id))
     dispatch(deleteActivity(props.id));
-    // navigate('/activities')
   };
   const handleUpdate = () => {
     dispatch(getActivityById(props.id))

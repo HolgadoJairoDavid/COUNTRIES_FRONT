@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import {
   deleteActivity,
-  getActivityById,
   getAllActivities,
 } from "../../Redux/actions";
 import { useLocation, useNavigate } from "react-router-dom";

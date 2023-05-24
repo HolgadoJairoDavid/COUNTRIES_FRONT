@@ -7,7 +7,6 @@ import {
   putActivity,
   getCountriesByName,
   getAllCountries,
-  getActivityById,
 } from "../../Redux/actions";
 import CountryCreateActivity from "../../Components/CountryCreateActivity/CountryCreateActivity";
 
@@ -15,13 +14,11 @@ const PutActivity = (props) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
-
-  const activityById = useSelector((state) => state.activityById);
+  const allActivities = useSelector((state) => state.allActivities);
+  const activityById = allActivities.find((activity) => activity.id === id);
   const allCountries = useSelector((state) => state.allCountries);
   const countriesByName = useSelector((state) => state.countriesByName);
   const [name, setName] = React.useState("");
-
-  console.log(activityById);
 
   const [state, setState] = React.useState({
     name: activityById.name,
@@ -71,9 +68,11 @@ const PutActivity = (props) => {
     });
   };
 
-  const countriesByActivity = allCountries.filter((country) =>
-    state.countriesNames.includes(country.name)
-  );
+  const countriesByActivity = state.name
+    ? allCountries.filter((country) =>
+        state.countriesNames.includes(country.name)
+      )
+    : [];
 
   const handleRemove = (event) => {
     event.preventDefault();
@@ -104,10 +103,6 @@ const PutActivity = (props) => {
       validate({ ...state, season: [...state.season, event.target.value] })
     );
   };
-
-  React.useEffect(() => {
-    dispatch(getActivityById(id));
-  }, [dispatch, id]);
   return (
     <div className={style.PutActivity}>
       {activityById ? (
@@ -137,7 +132,7 @@ const PutActivity = (props) => {
 
                     <input
                       onChange={handleChange}
-                      value={state.difficulty}
+                      value={state.difficulty || activityById.difficulty}
                       type="range"
                       min="1"
                       max="5"

@@ -22,7 +22,8 @@ import {
   POSTING,
   CLEAN_ALL_ACTIVITIES,
   SET_SEARCH,
-  SET_ORDER_OR_FILTER
+  SET_ORDER_OR_FILTER,
+  CLEAN_ACTIVITY_BY_ID,
 } from "./types";
 
 // FOR DETAIL COMPONENT WE USE A LOCAL STATE
@@ -97,37 +98,55 @@ const reducer = (state = initialStore, { type, payload }) => {
     case ORDER_COUNTRIES:
       let orderCountries;
       if (payload === "AlphabeticallyA") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.name > b.name ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.name > b.name ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.name > b.name ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.name > b.name ? 1 : -1
+            );
       } else if (payload === "AlphabeticallyD") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.name < b.name ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.name < b.name ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.name < b.name ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.name < b.name ? 1 : -1
+            );
       } else if (payload === "PopulationA") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.population > b.population ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.population > b.population ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.population > b.population ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.population > b.population ? 1 : -1
+            );
       } else if (payload === "PopulationD") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.population < b.population ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.population < b.population ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.population < b.population ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.population < b.population ? 1 : -1
+            );
       } else if (payload === "AreaA") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.area > b.area ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.area > b.area ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.area > b.area ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.area > b.area ? 1 : -1
+            );
       } else if (payload === "AreaD") {
-        orderCountries = state.search ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
-        a.area < b.area ? 1 : -1) : state.filteredAndOrderedCountries.sort((a, b) =>
-          a.area < b.area ? 1 : -1
-        );
+        orderCountries = state.search
+          ? state.filteredAndOrderedCountriesSearch.sort((a, b) =>
+              a.area < b.area ? 1 : -1
+            )
+          : state.filteredAndOrderedCountries.sort((a, b) =>
+              a.area < b.area ? 1 : -1
+            );
       }
-      if(!state.search){
+      if (!state.search) {
         return {
           ...state,
           order: true,
@@ -139,13 +158,13 @@ const reducer = (state = initialStore, { type, payload }) => {
         return {
           ...state,
           orderOrFilter: true,
-          filteredAndOrderedCountriesSearch: [...orderCountries]
-        }
+          filteredAndOrderedCountriesSearch: [...orderCountries],
+        };
       }
 
     // FILTER
     case FILTER_COUNTRIES_BY_CONTINENT:
-      if(!state.search){
+      if (!state.search) {
         return {
           ...state,
           filter: true,
@@ -161,12 +180,14 @@ const reducer = (state = initialStore, { type, payload }) => {
         return {
           ...state,
           orderOrFilter: true,
-          filteredAndOrderedCountriesSearch: state.countriesByName.filter((country) => country.continent === payload)
-        }
+          filteredAndOrderedCountriesSearch: state.countriesByName.filter(
+            (country) => country.continent === payload
+          ),
+        };
       }
 
     case FILTER_COUNTRIES_BY_SUBREGION:
-      if(!state.search){
+      if (!state.search) {
         return {
           ...state,
           filter: true,
@@ -182,12 +203,14 @@ const reducer = (state = initialStore, { type, payload }) => {
         return {
           ...state,
           orderOrFilter: true,
-          filteredAndOrderedCountriesSearch: state.countriesByName.filter((country) => country.subregion === payload)
-        }
+          filteredAndOrderedCountriesSearch: state.countriesByName.filter(
+            (country) => country.subregion === payload
+          ),
+        };
       }
 
     case FILTER_BY_ACTIVITIES:
-      if(!state.search){
+      if (!state.search) {
         return {
           ...state,
           filter: true,
@@ -197,7 +220,9 @@ const reducer = (state = initialStore, { type, payload }) => {
           ),
           tenFilteredAndOrderedCountries: state.allCountries
             .filter((country) =>
-              country.activitiesData.some((activity) => activity.name === payload)
+              country.activitiesData.some(
+                (activity) => activity.name === payload
+              )
             )
             .slice(0, 10),
         };
@@ -205,10 +230,13 @@ const reducer = (state = initialStore, { type, payload }) => {
         return {
           ...state,
           orderOrFilter: true,
-          filteredAndOrderedCountriesSearch: state.countriesByName.filter((country) =>
-          country.activitiesData.some((activity) => activity.name === payload)
-        )
-        }
+          filteredAndOrderedCountriesSearch: state.countriesByName.filter(
+            (country) =>
+              country.activitiesData.some(
+                (activity) => activity.name === payload
+              )
+          ),
+        };
       }
 
     // SEE_ALL
@@ -248,6 +276,7 @@ const reducer = (state = initialStore, { type, payload }) => {
         tenFilteredAndOrderedCountries: [],
         countriesByName: [],
         allActivities: [],
+        activityById: {},
       };
 
     case CLEAN_SEARCH_RESULTS:
@@ -273,22 +302,27 @@ const reducer = (state = initialStore, { type, payload }) => {
         ...state,
         post: payload,
       };
-    case CLEAN_ALL_ACTIVITIES: 
-    return {
-      ...state,
-      allActivities: []
-    }
+    case CLEAN_ALL_ACTIVITIES:
+      return {
+        ...state,
+        allActivities: [],
+      };
 
-    case SET_SEARCH: 
-    return {
-      ...state,
-      search: false
-    }
+    case SET_SEARCH:
+      return {
+        ...state,
+        search: false,
+      };
 
     case SET_ORDER_OR_FILTER:
-      return{
+      return {
         ...state,
         orderOrFilter: false,
+      };
+    case CLEAN_ACTIVITY_BY_ID:
+      return {
+        ...state,
+        activityById: {}
       }
 
     default:

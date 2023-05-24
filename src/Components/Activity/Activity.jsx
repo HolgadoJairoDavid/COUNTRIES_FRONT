@@ -4,18 +4,19 @@ import {
   getActivityById,
   getAllActivities,
 } from "../../Redux/actions";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import style from "./activity.module.css";
 
 const Activity = (props) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const { pathname } = useLocation();
   const handleDelete = () => {
     dispatch(deleteActivity(props.id));
   };
   const handleUpdate = () => {
-    dispatch(getActivityById(props.id))
+    navigate(`/activities/${props.id}`)
   }
 
   useEffect(() => {
@@ -31,9 +32,8 @@ const Activity = (props) => {
         </div>
       <div className={style.Buttons}>
         <button onClick={handleUpdate}>
-          <NavLink to={`/activities/${props.id}`} className={style.NavLink}>
+           {/* className={style.NavLink}> */}
             Update
-          </NavLink>
         </button>
       </div>
       <div className={style.InfoAndImage}>

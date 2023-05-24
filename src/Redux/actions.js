@@ -23,6 +23,7 @@ import {
   CLEAN_ALL_ACTIVITIES,
   SET_SEARCH,
   SET_ORDER_OR_FILTER,
+  CLEAN_ACTIVITY_BY_ID
 } from "./types";
 import axios from "axios";
 
@@ -249,3 +250,9 @@ export const setOrderOrFilter = () => {
     type: SET_ORDER_OR_FILTER,
   };
 };
+
+export const cleanActivityById = () => {
+  return {
+    type: CLEAN_ACTIVITY_BY_ID
+  }
+}

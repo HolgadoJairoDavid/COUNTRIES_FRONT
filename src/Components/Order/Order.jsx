@@ -24,8 +24,8 @@ const Order = (props) => {
       <option value='' disabled>
         Order By Population
         </option>
-        <option value="PopulationA">Lesser to Greater</option>
-        <option value="PopulationD">Greater to Lesser</option>
+        <option value="PopulationA">Lower to Higher</option>
+        <option value="PopulationD">Higher to Lower</option>
       </select>
       </div>
 
@@ -34,8 +34,8 @@ const Order = (props) => {
       <option value='' disabled>
         Order By Area
         </option> 
-        <option value="AreaA">Lesser to Greater</option>
-        <option value="AreaD">Greater to Lesser</option>
+        <option value="AreaA">Lower to Higher</option>
+        <option value="AreaD">Higher to Lower</option>
       </select>
       </div>
     </div>

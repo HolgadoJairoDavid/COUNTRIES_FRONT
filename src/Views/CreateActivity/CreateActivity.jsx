@@ -271,7 +271,7 @@ const CreateActivity = (props) => {
         </div>
 
 
-        <button className={style.ButtonSubmit} onClick={handleSubmit} disabled={!state.name}>
+        <button disabled={Object.keys(error).length > 0 || !state.name} className={style.ButtonSubmit} onClick={handleSubmit} >
           Submit
         </button>
       </form>

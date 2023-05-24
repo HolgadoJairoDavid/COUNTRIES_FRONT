@@ -287,12 +287,13 @@
   margin-left: 79vw;
 }
 
-.ButtonSubmit:hover {
-  background-color: #ff2167df;
-  border: 1px solid #ff2167df;
-  box-shadow: -1px 1px 7px #ff5e91df;
+.ButtonSubmit:disabled{
+  background-color: #f86e9a92;
+  color: #ffffffae;
+  border: 1px solid #f86e9a92;
 }
+
 .ButtonSubmit:active {
-  position: relative;
-  top: 1px;
+	position:relative;
+	top:1px;
 }

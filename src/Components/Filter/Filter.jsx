@@ -44,6 +44,7 @@ const Filter = (props) => {
 
   const handleSubregions = (event) => {
     dispatch(filterCountriesBySubregion(event.target.value));
+
     if (!search) {
       props.seteador();
     }
@@ -51,6 +52,7 @@ const Filter = (props) => {
 
   const handleActivities = (event) => {
     dispatch(filterCountriesByActivities(event.target.value));
+
     if (!search) {
       props.seteador();
     }

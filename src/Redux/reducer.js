@@ -75,7 +75,7 @@ const reducer = (state = initialStore, { type, payload }) => {
     case DELETEACTIVITY:
       return {
         ...state,
-        allCountries: payload,
+        allActivities: payload,
       };
     case POSTACTIVITY:
       return {

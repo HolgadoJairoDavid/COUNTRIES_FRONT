@@ -20,6 +20,7 @@ const NavBar = (props) => {
 
   const handleActivities = () => {
     dispatch(setSearch());
+    dispatch(getAllCountries());
     if (allActivities.length === 0) {
       dispatch(getAllActivities());
     }

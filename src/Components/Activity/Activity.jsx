@@ -15,15 +15,9 @@ const Activity = (props) => {
   // const navigate = useNavigate()
   const { pathname } = useLocation();
   const handleDelete = () => {
+    // dispatch(cleanAllACtivities(props.id))
     dispatch(deleteActivity(props.id));
-    dispatch(cleanAllACtivities())
     // navigate('/activities')
-
-    dispatch(getAllActivities)
-
-    if (pathname.includes("detail")) {
-      dispatch(getCountryById(props.countryId));
-    }
   };
   const handleUpdate = () => {
     dispatch(getActivityById(props.id))

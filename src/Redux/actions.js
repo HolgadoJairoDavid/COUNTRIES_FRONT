@@ -231,9 +231,10 @@ export const posting = (paylaod) => {
   };
 };
 
-export const cleanAllACtivities = () => {
+export const cleanAllACtivities = (id) => {
   return {
     type: CLEAN_ALL_ACTIVITIES,
+    paylaod: id
   };
 };
 

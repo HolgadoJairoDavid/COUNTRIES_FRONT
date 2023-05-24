@@ -49,7 +49,7 @@ const Home = (props) => {
     );
     setCurrentPage(nextPage);
   };
-  
+
   const prevHandler = () => {
     if (currentPage === 0) return;
     dispatch(setTester());
@@ -82,7 +82,9 @@ const Home = (props) => {
           <div className={style.Bars}>
             <SearchBar />
             <FilterAndOrderBar seteador2={seteador2} seteador={seteador} />
-            <button className={style.Reset} onClick={handleReset}>Reset</button>
+            <button className={style.Reset} onClick={handleReset}>
+              Reset
+            </button>
           </div>
           <div className={style.Pages}>
             {" "}

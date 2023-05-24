@@ -49,7 +49,6 @@
 }
 .Buttons button:active {
   position: relative;
-  top: 1px;
 }
 
 .ButtonReset {
@@ -92,10 +91,6 @@
   border: 1px solid #ff2167df;
   box-shadow: -1px 1px 7px #ff5e91df;
 }
-.ButtonReset button:active {
-  position: relative;
-  top: 1px;
-}
 
 .InfoAndImage {
   margin-top: 17px;
@@ -118,6 +113,7 @@
 
 .Image img {
   max-width: 100%;
+  max-height: 200px;
   border-radius: 7px;
 }
 
